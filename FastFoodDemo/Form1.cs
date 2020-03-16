@@ -20,7 +20,7 @@ namespace FastFoodDemo
             SidePanel.Top = button1.Top;
             firstCustomControl1.BringToFront();
         }
-
+        
         private void customDesign()
         {
             panelSettingSubmenu.Visible = false;
@@ -56,13 +56,7 @@ namespace FastFoodDemo
             SidePanel.Top = button2.Top;
             mySecondCustmControl1.BringToFront();
         }
-        private void button3_Click(object sender, EventArgs e)
-        {
-            SidePanel.Height = button3.Height;
-            SidePanel.Top = button3.Top;
-            firstCustomControl1.BringToFront();
-        }
-
+    
         private void button13_Click(object sender, EventArgs e)
         {
             Close();
@@ -78,6 +72,11 @@ namespace FastFoodDemo
 
         }
 
+        private void settingsControl31_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -88,6 +87,13 @@ namespace FastFoodDemo
 
         }
 
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            SidePanel.Height = button3.Height;
+            SidePanel.Top = button3.Top;
+            settingsControl31.BringToFront();
+        }
+        
         private void button4_Click(object sender, EventArgs e)
         {
             SidePanel.Height = button4.Height;
@@ -95,32 +101,35 @@ namespace FastFoodDemo
             showSubMenu(panelSettingSubmenu);
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button15_Click(object sender, EventArgs e)
+        {
+            // egen kode for funksjon
+
+            hideSubMenu();
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
         {
             settingsControl1.BringToFront();
 
             hideSubMenu();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
             settingsControl21.BringToFront();
 
             hideSubMenu();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            // egen kode for funksjon
-
-            hideSubMenu();
+            showSubMenu(panelSettingSubmenu);
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private void buttonZoom()
         {
-            // egen kode for funksjon
-
-            hideSubMenu();
+           
         }
     }
 }

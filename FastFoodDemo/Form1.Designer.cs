@@ -31,9 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.SidePanel = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.SidePanel = new System.Windows.Forms.Panel();
             this.button14 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -49,12 +50,12 @@
             this.button13 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panelSettingSubmenu = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.settingsControl21 = new FastFoodDemo.SettingsControl2();
             this.settingsControl1 = new FastFoodDemo.SettingsControl();
+            this.settingsControl31 = new FastFoodDemo.SettingsControl3();
             this.mySecondCustmControl1 = new FastFoodDemo.MySecondCustmControl();
             this.firstCustomControl1 = new FastFoodDemo.FirstCustomControl();
             this.panel1.SuspendLayout();
@@ -68,26 +69,38 @@
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.panel1.Controls.Add(this.panelSettingSubmenu);
-            this.panel1.Controls.Add(this.SidePanel);
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Controls.Add(this.button14);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(209, 598);
+            this.panel1.Size = new System.Drawing.Size(209, 615);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // SidePanel
+            // button5
             // 
-            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.SidePanel.Location = new System.Drawing.Point(0, 0);
-            this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(4, 54);
-            this.SidePanel.TabIndex = 4;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(0, 216);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.button5.Size = new System.Drawing.Size(209, 54);
+            this.button5.TabIndex = 7;
+            this.button5.Text = "       Settings";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -102,11 +115,10 @@
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(209, 54);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "       Settings";
+            this.button4.TabIndex = 6;
+            this.button4.Text = "       Songs";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -121,10 +133,19 @@
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(209, 54);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "       Music";
+            this.button3.TabIndex = 5;
+            this.button3.Text = "       Admin";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // SidePanel
+            // 
+            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.SidePanel.Location = new System.Drawing.Point(0, 0);
+            this.SidePanel.Name = "SidePanel";
+            this.SidePanel.Size = new System.Drawing.Size(4, 54);
+            this.SidePanel.TabIndex = 4;
             // 
             // button14
             // 
@@ -316,62 +337,41 @@
             // 
             // panelSettingSubmenu
             // 
-            this.panelSettingSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panelSettingSubmenu.Controls.Add(this.button15);
             this.panelSettingSubmenu.Controls.Add(this.button7);
             this.panelSettingSubmenu.Controls.Add(this.button6);
-            this.panelSettingSubmenu.Controls.Add(this.button5);
-            this.panelSettingSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSettingSubmenu.Location = new System.Drawing.Point(0, 216);
+            this.panelSettingSubmenu.Location = new System.Drawing.Point(0, 269);
             this.panelSettingSubmenu.Name = "panelSettingSubmenu";
-            this.panelSettingSubmenu.Size = new System.Drawing.Size(209, 174);
-            this.panelSettingSubmenu.TabIndex = 7;
-            // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(0, 0);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(209, 40);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Account";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.panelSettingSubmenu.Size = new System.Drawing.Size(209, 161);
+            this.panelSettingSubmenu.TabIndex = 8;
             // 
             // button6
             // 
             this.button6.Dock = System.Windows.Forms.DockStyle.Top;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Location = new System.Drawing.Point(0, 40);
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.SystemColors.Control;
+            this.button6.Location = new System.Drawing.Point(0, 0);
             this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(209, 40);
+            this.button6.Size = new System.Drawing.Size(209, 44);
             this.button6.TabIndex = 8;
-            this.button6.Text = "Security";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Text = "Acount";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // button7
             // 
             this.button7.Dock = System.Windows.Forms.DockStyle.Top;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button7.Location = new System.Drawing.Point(0, 80);
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.SystemColors.Control;
+            this.button7.Location = new System.Drawing.Point(0, 44);
             this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(209, 40);
+            this.button7.Size = new System.Drawing.Size(209, 44);
             this.button7.TabIndex = 9;
-            this.button7.Text = "Administrative Tasks";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Text = "Security";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
@@ -380,30 +380,35 @@
             this.button15.Dock = System.Windows.Forms.DockStyle.Top;
             this.button15.FlatAppearance.BorderSize = 0;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button15.Location = new System.Drawing.Point(0, 120);
+            this.button15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.ForeColor = System.Drawing.SystemColors.Control;
+            this.button15.Location = new System.Drawing.Point(0, 88);
             this.button15.Name = "button15";
-            this.button15.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button15.Size = new System.Drawing.Size(209, 40);
+            this.button15.Size = new System.Drawing.Size(209, 44);
             this.button15.TabIndex = 10;
-            this.button15.Text = "Sign Out";
-            this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button15.Text = "Log Out";
             this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // settingsControl21
             // 
-            this.settingsControl21.Location = new System.Drawing.Point(209, 174);
+            this.settingsControl21.Location = new System.Drawing.Point(215, 149);
             this.settingsControl21.Name = "settingsControl21";
             this.settingsControl21.Size = new System.Drawing.Size(817, 406);
-            this.settingsControl21.TabIndex = 8;
+            this.settingsControl21.TabIndex = 11;
             // 
             // settingsControl1
             // 
-            this.settingsControl1.Location = new System.Drawing.Point(209, 174);
+            this.settingsControl1.Location = new System.Drawing.Point(209, 149);
             this.settingsControl1.Name = "settingsControl1";
             this.settingsControl1.Size = new System.Drawing.Size(817, 406);
-            this.settingsControl1.TabIndex = 7;
+            this.settingsControl1.TabIndex = 11;
+            // 
+            // settingsControl31
+            // 
+            this.settingsControl31.Location = new System.Drawing.Point(224, 149);
+            this.settingsControl31.Name = "settingsControl31";
+            this.settingsControl31.Size = new System.Drawing.Size(817, 406);
+            this.settingsControl31.TabIndex = 7;
             // 
             // mySecondCustmControl1
             // 
@@ -426,9 +431,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1055, 598);
+            this.ClientSize = new System.Drawing.Size(1055, 615);
             this.Controls.Add(this.settingsControl21);
             this.Controls.Add(this.settingsControl1);
+            this.Controls.Add(this.settingsControl31);
             this.Controls.Add(this.mySecondCustmControl1);
             this.Controls.Add(this.firstCustomControl1);
             this.Controls.Add(this.label4);
@@ -463,8 +469,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel SidePanel;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button8;
@@ -476,11 +480,14 @@
         private FirstCustomControl firstCustomControl1;
         private MySecondCustmControl mySecondCustmControl1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private SettingsControl3 settingsControl31;
         private System.Windows.Forms.Panel panelSettingSubmenu;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
         private SettingsControl settingsControl1;
         private SettingsControl2 settingsControl21;
     }

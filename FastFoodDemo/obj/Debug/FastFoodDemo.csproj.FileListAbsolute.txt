@@ -44,3 +44,5 @@ C:\Users\truls\source\repos\FastFoodDemo\bin\Debug\FastFoodDemo.exe
 C:\Users\truls\source\repos\FastFoodDemo\bin\Debug\FastFoodDemo.pdb
 C:\Users\truls\source\repos\FastFoodDemo\obj\Debug\FastFoodDemo.AccountControl.resources
 C:\Users\truls\source\repos\FastFoodDemo\obj\Debug\FastFoodDemo.SettingsControl2.resources
+C:\Users\truls\source\repos\FastFoodDemo\obj\Debug\FastFoodDemo.SettingsControl3.resources
+C:\Users\truls\source\repos\FastFoodDemo\obj\Debug\FastFoodDemo.csprojAssemblyReference.cache
