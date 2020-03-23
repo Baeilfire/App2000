@@ -50,7 +50,31 @@
     <Compile Include="AccountControl.Designer.cs">
       <DependentUpon>AccountControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddNewAdminControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddNewAdminControl.Designer.cs">
+      <DependentUpon>AddNewAdminControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AditAdminControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AditAdminControl.Designer.cs">
+      <DependentUpon>AditAdminControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminTaskControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="adminTaskControl.Designer.cs">
+      <DependentUpon>adminTaskControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="ByVal.cs" />
+    <Compile Include="EditAdminControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EditAdminControl.Designer.cs">
+      <DependentUpon>EditAdminControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="FirstCustomControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -83,14 +107,20 @@
     <Compile Include="SettingsControl2.Designer.cs">
       <DependentUpon>SettingsControl2.cs</DependentUpon>
     </Compile>
-    <Compile Include="SettingsControl3.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="SettingsControl3.Designer.cs">
-      <DependentUpon>SettingsControl3.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AccountControl.resx">
       <DependentUpon>AccountControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewAdminControl.resx">
+      <DependentUpon>AddNewAdminControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AditAdminControl.resx">
+      <DependentUpon>AditAdminControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminTaskControl.resx">
+      <DependentUpon>adminTaskControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditAdminControl.resx">
+      <DependentUpon>EditAdminControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FirstCustomControl.resx">
       <DependentUpon>FirstCustomControl.cs</DependentUpon>
@@ -116,9 +146,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SettingsControl2.resx">
       <DependentUpon>SettingsControl2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SettingsControl3.resx">
-      <DependentUpon>SettingsControl3.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

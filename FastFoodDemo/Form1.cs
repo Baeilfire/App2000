@@ -10,26 +10,26 @@ using System.Windows.Forms;
 
 namespace FastFoodDemo
 {
-    public partial class Form1 : Form
+    public partial class mainWindow : Form
     {
-        public Form1()
+        public mainWindow()
         {
             InitializeComponent();
             customDesign();
-            SidePanel.Height = button1.Height;
-            SidePanel.Top = button1.Top;
+            SidePanel.Height = mainHomeButton.Height;
+            SidePanel.Top = mainHomeButton.Top;
             firstCustomControl1.BringToFront();
         }
         
         private void customDesign()
         {
-            panelSettingSubmenu.Visible = false;
+            mainPanelSettingSubmenu.Visible = false;
         }
 
         private void hideSubMenu()
         {
-            if (panelSettingSubmenu.Visible == true)
-                panelSettingSubmenu.Visible = false;
+            if (mainPanelSettingSubmenu.Visible == true)
+                mainPanelSettingSubmenu.Visible = false;
         }
 
         private void showSubMenu(Panel subMenu)
@@ -43,23 +43,18 @@ namespace FastFoodDemo
                 subMenu.Visible = false;
         }       
 
-        private void button1_Click(object sender, EventArgs e)
+        private void mainHomeButton_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button1.Height;
-            SidePanel.Top = button1.Top;
+            SidePanel.Height = mainHomeButton.Height;
+            SidePanel.Top = mainHomeButton.Top;
             firstCustomControl1.BringToFront();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void mainUsersButton_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button2.Height;
-            SidePanel.Top = button2.Top;
+            SidePanel.Height = mainUsersButton.Height;
+            SidePanel.Top = mainUsersButton.Top;
             mySecondCustmControl1.BringToFront();
-        }
-    
-        private void button13_Click(object sender, EventArgs e)
-        {
-            Close();
         }
 
         private void firstCustomControl1_Load(object sender, EventArgs e)
@@ -77,59 +72,92 @@ namespace FastFoodDemo
 
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void mainTopPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
+        private void mainAdminButton_Click_1(object sender, EventArgs e)
         {
-            SidePanel.Height = button3.Height;
-            SidePanel.Top = button3.Top;
-            settingsControl31.BringToFront();
+            SidePanel.Height = mainAdminButton.Height;
+            SidePanel.Top = mainAdminButton.Top;
+            adminTaskControl1.BringToFront();
         }
         
-        private void button4_Click(object sender, EventArgs e)
+        private void mainSongsButton_Click(object sender, EventArgs e)
         {
-            SidePanel.Height = button4.Height;
-            SidePanel.Top = button4.Top;
-            showSubMenu(panelSettingSubmenu);
+            SidePanel.Height = mainSongsButton.Height;
+            SidePanel.Top = mainSongsButton.Top;
+            showSubMenu(mainPanelSettingSubmenu);
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private void mainSubSettingsLogOut_Click(object sender, EventArgs e)
         {
             // egen kode for funksjon
 
             hideSubMenu();
         }
 
-        private void button6_Click_1(object sender, EventArgs e)
+        private void mainSubSettingAccountButton_Click_1(object sender, EventArgs e)
         {
-            settingsControl1.BringToFront();
+            settingsControlAccount.BringToFront();
 
             hideSubMenu();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void mainSubSettingSecurityButton_Click(object sender, EventArgs e)
         {
-            settingsControl21.BringToFront();
+            settingsControlSecurity.BringToFront();
 
             hideSubMenu();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void mainSettingsMenuButton_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelSettingSubmenu);
+            showSubMenu(mainPanelSettingSubmenu);
         }
 
-        private void buttonZoom()
+        private void mainSubSettingsLogOutButton_Click(object sender, EventArgs e)
         {
-           
+
+        }
+
+        private void mainHelpButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mainTopFacebook_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mainTopTwitter_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void mainTopInstagram_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mainTopNotification_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void mainTopExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
